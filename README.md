@@ -10,7 +10,7 @@ My personal portfolio website showcasing my skills in Linux, Cloud Computing, an
 ---
 
 ## 🌐 Live Portfolio
-👉 **[Visit My Portfolio](https://shravani-portfolio.netlify.app)**
+👉 **[Visit My Portfolio](https://shraavaniii.github.io/shravani-portfolio/)**
 
 ---
 
