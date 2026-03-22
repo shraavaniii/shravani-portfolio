@@ -73,8 +73,15 @@ I believe in **learning by doing** — every concept I study, I try to apply thr
 
 ## 🏆 Certifications & Courses
 
-- ✅ AWS Cloud Practitioner Essentials
-- 🔄 Currently pursuing: More AWS & Cybersecurity certifications
+- AWS Cloud Practitioner Essentials
+- Cyber Security & Ethical Hacking — E-Max India
+- ISC2 CC Certification
+- Intro to Cybersecurity — Cisco Networking Academy
+- Complete Linux Bash Shell Scripting 
+- Complete Microsoft SQL Server Database Administration 
+- Complete JavaScript Programming 
+- Complete Linux Training Course 
+- Python Programming Crash Course 
 
 ---
 
@@ -120,10 +127,13 @@ I believe in **learning by doing** — every concept I study, I try to apply thr
 - 📚 I learn something new every single day
 
 ---
-
-``"Security is not a product, but a process." — Bruce Schneier
-  ``Made with ❤️ by Shravani Hendre
+<p align="center">
+  <i>"Security is not a product, but a process." — Bruce Schneier</i>
+</p>
+<p align="center">
+  Made with ❤️ by Shravani Hendre
+</p>
 
 ## 📫 Contact
-- Email: your-email@gmail.com
-- LinkedIn: (add later)
+- Email: shravanihendr@gmail.com
+- LinkedIn: [Shravani Hendre](https://www.linkedin.com/in/shravani-hendre-83a63328b/)
