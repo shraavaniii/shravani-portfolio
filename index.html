@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shravani Hendre — Aspiring Cloud Security Professional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Epilogue:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background blobs -->
+<div class="bg-blob blob-1"></div>
+<div class="bg-blob blob-2"></div>
+<div class="bg-blob blob-3"></div>
+
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+
+<!-- ── NAV ── -->
+<nav class="nav" id="nav">
+  <a href="#home" class="nav-logo">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+      <rect width="36" height="36" rx="10" fill="url(#lg)"/>
+      <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Syne" font-weight="800" font-size="14">SH</text>
+      <defs><linearGradient id="lg" x1="0" y1="0" x2="36" y2="36"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
+    </svg>
+    <span>Shravani Hendre</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home" class="nav-a active">Home</a></li>
+    <li><a href="#about" class="nav-a">About</a></li>
+    <li><a href="#work" class="nav-a">Work</a></li>
+    <li><a href="#contact" class="nav-a">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Open to Work</a>
+  <button class="burger" id="burger" aria-label="menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="drawer" id="drawer">
+  <ul>
+    <li><a href="#home" class="d-link">Home</a></li>
+    <li><a href="#about" class="d-link">About</a></li>
+    <li><a href="#work" class="d-link">Work</a></li>
+    <li><a href="#services" class="d-link">Services</a></li>
+    <li><a href="#contact" class="d-link">Contact</a></li>
+  </ul>
+</div>
+
+<!-- ── HERO ── -->
+<section id="home" class="hero">
+  <div class="hero-left">
+    <div class="hero-badge anim-fade-up" style="--d:.1s">
+      <span class="pulse"></span> Open to opportunities
+    </div>
+    <h1 class="hero-h1 anim-fade-up" style="--d:.2s">
+      Hello! I Am<br>
+      <span class="gradient-text">Shravani Hendre</span>
+    </h1>
+    <div class="typewriter-wrap anim-fade-up" style="--d:.35s">
+      A <span class="typewriter" id="typewriter"></span>
+    </div>
+    <p class="hero-p anim-fade-up" style="--d:.45s">
+      A passionate tech enthusiast diving deep into Linux, Cloud infrastructure, and Networking — building reliable systems, mastering the command line, and connecting the dots between ports, protocols, and the cloud.
+    </p>
+    <div class="hero-btns anim-fade-up" style="--d:.55s">
+      <a href="#work" class="btn-grad">View My Work <i class="fas fa-arrow-right"></i></a>
+      <a href="#contact" class="btn-outline">Let's Talk</a>
+    </div>
+    <div class="hero-social anim-fade-up" style="--d:.65s">
+      <a href="https://www.linkedin.com/in/shravani-hendre-83a63328b" target="_blank" class="s-icon"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/shraavaniii" target="_blank" class="s-icon"><i class="fab fa-github"></i></a>
+      <a href="https://x.com/Shravani728277" target="_blank" class="s-icon"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+
+  <div class="hero-right anim-fade-up" style="--d:.3s">
+    <div class="photo-wrap">
+      <div class="photo-glow"></div>
+      <div class="photo-ring"></div>
+      <div class="photo-frame">
+        <img src="shravani.jpeg" alt="Shravani" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <!-- Floating cards -->
+      <div class="float-card card-1">
+        <i class="fas fa-terminal"></i>
+        <div><strong>Linux</strong><span>Logs & Commands</span></div>
+      </div>
+
+      <div class="float-card card-2">
+        <i class="fas fa-server"></i>
+        <div><strong>Cloud Basics</strong><span>EC2 • S3 • IAM</span></div>
+      </div>
+
+      <div class="float-card card-3">
+        <i class="fas fa-network-wired"></i>
+        <div><strong>Networking</strong><span>Ports • Protocols</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ticker -->
+<div class="ticker-bar">
+  <div class="ticker-track">
+    <span>Cloud Computing</span><b>✦</b>
+    <span>AWS Fundamentals</span><b>✦</b>
+    <span>Cybersecurity Basics</span><b>✦</b>
+    <span>Network Security</span><b>✦</b>
+    <span>Linux Administration</span><b>✦</b>
+    <span>IAM & Access Control</span><b>✦</b>
+    <span>Cloud Security</span><b>✦</b>
+    <span>Ethical Hacking</span><b>✦</b>
+    <span>System Monitoring</span><b>✦</b>
+  </div>
+</div>
+
+<!-- ── ABOUT ── -->
+<section id="about" class="section about-sec">
+  <div class="container">
+    <p class="sec-label reveal">01 — About Me</p>
+    <h2 class="sec-title reveal">Passionate about <em>securing</em><br>the modern cloud</h2>    <div class="about-grid">
+      <div class="about-text-col reveal">
+        <p class="about-lead">
+          I'm Shravani Hendre — an IT student focused on cloud computing and cybersecurity, passionate about building secure and efficient systems.
+        </p>
+
+        <p class="about-body">
+          I'm currently developing skills in AWS, Linux, and networking, with a strong interest in cloud security and system protection. I enjoy learning how systems work, identifying vulnerabilities, and understanding how to secure them.
+        </p>
+
+        <p class="about-body">
+          Actively building hands-on projects and continuously improving my knowledge to grow into a cloud security professional.
+        </p>
+
+        <div class="skills-grid">
+          <div class="skill-item"><i class="fas fa-cloud"></i> AWS Fundamentals</div>
+          <div class="skill-item"><i class="fas fa-shield-alt"></i> Cybersecurity Basics</div>
+          <div class="skill-item"><i class="fas fa-network-wired"></i> Networking</div>
+          <div class="skill-item"><i class="fas fa-terminal"></i> Linux</div>
+          <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+          <div class="skill-item"><i class="fas fa-user-lock"></i> IAM Concepts</div>
+          <div class="skill-item"><i class="fas fa-server"></i> Cloud Computing</div>
+          <div class="skill-item"><i class="fas fa-search"></i> Log Monitoring</div>
+        </div>
+
+        <a href="#" target="_blank" class="btn-grad" style="margin-top:32px; display:inline-flex;">
+          Download Resume <i class="fas fa-download"></i>
+        </a>
+      </div>
+      <div class="about-stats-col reveal">
+        <div class="stat-card">
+          <span class="stat-big">1</span><span class="stat-suf">+</span>
+          <p>AWS Courses Completed</p>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-big">3</span><span class="stat-suf">+</span>
+          <p>Core Skills (Linux, Python, Networking)</p>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-big">2</span><span class="stat-suf">+</span>
+          <p>Cybersecurity Domains Explored</p>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-big">∞</span>
+          <p>Learning & Growth</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WORK ── -->
+<section id="work" class="section work-sec">
+  <div class="container">
+    <p class="sec-label reveal">02 — Featured Work</p>
+    <h2 class="sec-title reveal">Selected <em>Projects</em></h2>
+
+    <div class="work-list">
+      <div class="work-item reveal">
+        <div class="work-img" style="background:linear-gradient(135deg,#0f0c29,#302b63,#24243e)">
+        <i class="fas fa-terminal work-ico"></i>
+      </div>
+      <div class="work-info">
+        <span class="work-tag">Linux</span>
+        <h3>Sticky Notes CLI Tool</h3>
+        <p>A command-line based notes application built using Linux and shell scripting for managing quick notes efficiently.</p>
+        <a href="https://github.com/shraavaniii/sticky-notes-cli" target="_blank" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact" class="section contact-sec">
+  <div class="container">
+    <p class="sec-label reveal">04 — Contact</p>
+    <h2 class="sec-title reveal">Get in <em>Touch</em></h2>
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <p>Open to internships, learning opportunities, and collaborations in cloud and cybersecurity.</p>
+        <div class="c-info"><i class="fas fa-envelope"></i><div><span>Email</span><a href="https://mail.google.com/mail/?view=cm&to=shravanihendr@gmail.com" target="_blank">shravanihendr@gmail.com</a></div></div>
+        <div class="c-info"><i class="fas fa-phone"></i><div><span>Phone</span><a href="tel:+917071554950">+91 7071554950</a></div></div>
+        <div class="c-info"><i class="fas fa-location-dot"></i><div><span>Location</span><p>Maharashtra, India</p></div></div>
+        <div class="c-socials">
+          <a href="https://www.linkedin.com/in/shravani-hendre-83a63328b" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/shraavaniii" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://x.com/Shravani728277" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mjgadrlp" method="POST">
+        <div class="form-row">
+          <div class="f-group"><label>Name</label><input type="text" name="name" placeholder="John Doe" required></div>
+          <div class="f-group"><label>Email</label><input type="email" name="email" placeholder="john@example.com" required></div>
+        </div>
+        <div class="f-group"><label>Subject</label><input type="text" name="subject" placeholder="Project enquiry"></div>
+        <div class="f-group"><label>Message</label><textarea rows="5" name="message" placeholder="Tell me about your project..." required></textarea></div>
+        <button type="submit" class="btn-grad" style="width:100%;justify-content:center;">
+          Send Message <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <svg width="32" height="32" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="10" fill="url(#lg2)"/><text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Syne" font-weight="800" font-size="14">SH</text><defs><linearGradient id="lg2" x1="0" y1="0" x2="36" y2="36"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs></svg>
+        <span>Shravani Hendre</span>
+      </div>
+      <p class="footer-copy">© 2025 Shravani Hendre. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
