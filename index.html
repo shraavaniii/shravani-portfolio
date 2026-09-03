@@ -1,255 +1,1016 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shravani Hendre — Aspiring Cloud Security Professional</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Epilogue:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- This is the new line we are adding for your icon -->
+    <link rel="icon" type="image/jpeg" href="./public/favicon.jpg" />
+
+    <title>Shravani Hendre | Cybersecurity & Cloud Security</title>
+
+    <meta name="description"
+          content="Shravani Hendre — Final-year Information Technology student focused on Cybersecurity and Cloud Security.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
 
-<!-- Background blobs -->
-<div class="bg-blob blob-1"></div>
-<div class="bg-blob blob-2"></div>
-<div class="bg-blob blob-3"></div>
+<!-- =========================
+     CURSOR
+========================= -->
 
-<!-- Cursor -->
-<div class="cursor" id="cursor"></div>
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
 
-<!-- ── NAV ── -->
-<nav class="nav" id="nav">
-  <a href="#home" class="nav-logo">
-    <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-      <rect width="36" height="36" rx="10" fill="url(#lg)"/>
-      <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Syne" font-weight="800" font-size="14">SH</text>
-      <defs><linearGradient id="lg" x1="0" y1="0" x2="36" y2="36"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
-    </svg>
-    <span>Shravani Hendre</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#home" class="nav-a active">Home</a></li>
-    <li><a href="#about" class="nav-a">About</a></li>
-    <li><a href="#work" class="nav-a">Work</a></li>
-    <li><a href="#contact" class="nav-a">Contact</a></li>
-  </ul>
-  <a href="#contact" class="nav-cta">Open to Work</a>
-  <button class="burger" id="burger" aria-label="menu">
-    <span></span><span></span><span></span>
-  </button>
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header class="navbar">
+
+
+<a href="#home" class="logo">
+    SH<span>.</span>
+</a>
+
+<nav class="nav-links">
+    <a href="#home" class="nav-link active">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#experience" class="nav-link">Experience</a>
+    <a href="#contact" class="nav-link">Contact</a>
 </nav>
 
-<!-- Mobile drawer -->
-<div class="drawer" id="drawer">
-  <ul>
-    <li><a href="#home" class="d-link">Home</a></li>
-    <li><a href="#about" class="d-link">About</a></li>
-    <li><a href="#work" class="d-link">Work</a></li>
-    <li><a href="#services" class="d-link">Services</a></li>
-    <li><a href="#contact" class="d-link">Contact</a></li>
-  </ul>
+<a href="#contact" class="nav-cta">
+    Open to Work
+    <span>↗</span>
+</a>
+
+<button class="menu-btn" aria-label="Open menu">
+    <span></span>
+    <span></span>
+</button>
+
+
+</header>
+
+<!-- =========================
+     MOBILE MENU
+========================= -->
+
+<div class="mobile-menu">
+
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+
+
 </div>
 
-<!-- ── HERO ── -->
-<section id="home" class="hero">
-  <div class="hero-left">
-    <div class="hero-badge anim-fade-up" style="--d:.1s">
-      <span class="pulse"></span> Open to opportunities
+<main>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section id="home" class="hero section">
+
+
+<div class="hero-grid"></div>
+
+<div class="hero-content">
+
+    <div class="hero-label">
+        <span class="status-dot"></span>
+        AVAILABLE FOR INTERNSHIPS
     </div>
-    <h1 class="hero-h1 anim-fade-up" style="--d:.2s">
-      Hello! I Am<br>
-      <span class="gradient-text">Shravani Hendre</span>
+
+    <h1>
+        Cybersecurity
+        <span class="outline-text">×</span>
+        <br>
+        Cloud Security
     </h1>
-    <div class="typewriter-wrap anim-fade-up" style="--d:.35s">
-      A <span class="typewriter" id="typewriter"></span>
-    </div>
-    <p class="hero-p anim-fade-up" style="--d:.45s">
-      A passionate tech enthusiast diving deep into Linux, Cloud infrastructure, and Networking — building reliable systems, mastering the command line, and connecting the dots between ports, protocols, and the cloud.
+
+    <p class="hero-description">
+        I'm <strong>Shravani Hendre</strong>, a final-year
+        Information Technology student building practical
+        security solutions across cybersecurity, cloud
+        infrastructure, and AWS.
     </p>
-    <div class="hero-btns anim-fade-up" style="--d:.55s">
-      <a href="#work" class="btn-grad">View My Work <i class="fas fa-arrow-right"></i></a>
-      <a href="#contact" class="btn-outline">Let's Talk</a>
+
+    <div class="hero-buttons">
+
+        <a href="#projects" class="primary-btn">
+            View My Work
+            <span>↗</span>
+        </a>
+
+        <a href="#contact" class="secondary-btn">
+            Let's Connect
+        </a>
+
     </div>
-    <div class="hero-social anim-fade-up" style="--d:.65s">
-      <a href="https://www.linkedin.com/in/shravani-hendre-83a63328b" target="_blank" class="s-icon"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://github.com/shraavaniii" target="_blank" class="s-icon"><i class="fab fa-github"></i></a>
-      <a href="https://x.com/Shravani728277" target="_blank" class="s-icon"><i class="fab fa-twitter"></i></a>
-    </div>
-  </div>
 
-  <div class="hero-right anim-fade-up" style="--d:.3s">
-    <div class="photo-wrap">
-      <div class="photo-glow"></div>
-      <div class="photo-ring"></div>
-      <div class="photo-frame">
-        <img src="shravani.jpeg" alt="Shravani" style="width:100%;height:100%;object-fit:cover">
-      </div>
-      <!-- Floating cards -->
-      <div class="float-card card-1">
-        <i class="fas fa-terminal"></i>
-        <div><strong>Linux</strong><span>Logs & Commands</span></div>
-      </div>
-
-      <div class="float-card card-2">
-        <i class="fas fa-server"></i>
-        <div><strong>Cloud Basics</strong><span>EC2 • S3 • IAM</span></div>
-      </div>
-
-      <div class="float-card card-3">
-        <i class="fas fa-network-wired"></i>
-        <div><strong>Networking</strong><span>Ports • Protocols</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Ticker -->
-<div class="ticker-bar">
-  <div class="ticker-track">
-    <span>Cloud Computing</span><b>✦</b>
-    <span>AWS Fundamentals</span><b>✦</b>
-    <span>Cybersecurity Basics</span><b>✦</b>
-    <span>Network Security</span><b>✦</b>
-    <span>Linux Administration</span><b>✦</b>
-    <span>IAM & Access Control</span><b>✦</b>
-    <span>Cloud Security</span><b>✦</b>
-    <span>Ethical Hacking</span><b>✦</b>
-    <span>System Monitoring</span><b>✦</b>
-  </div>
 </div>
 
-<!-- ── ABOUT ── -->
-<section id="about" class="section about-sec">
-  <div class="container">
-    <p class="sec-label reveal">01 — About Me</p>
-    <h2 class="sec-title reveal">Passionate about <em>securing</em><br>the modern cloud</h2>    <div class="about-grid">
-      <div class="about-text-col reveal">
-        <p class="about-lead">
-          I'm Shravani Hendre — an IT student focused on cloud computing and cybersecurity, passionate about building secure and efficient systems.
-        </p>
 
-        <p class="about-body">
-          I'm currently developing skills in AWS, Linux, and networking, with a strong interest in cloud security and system protection. I enjoy learning how systems work, identifying vulnerabilities, and understanding how to secure them.
-        </p>
+<!-- Profile -->
 
-        <p class="about-body">
-          Actively building hands-on projects and continuously improving my knowledge to grow into a cloud security professional.
-        </p>
+<div class="hero-profile">
 
-        <div class="skills-grid">
-          <div class="skill-item"><i class="fas fa-cloud"></i> AWS Fundamentals</div>
-          <div class="skill-item"><i class="fas fa-shield-alt"></i> Cybersecurity Basics</div>
-          <div class="skill-item"><i class="fas fa-network-wired"></i> Networking</div>
-          <div class="skill-item"><i class="fas fa-terminal"></i> Linux</div>
-          <div class="skill-item"><i class="fab fa-python"></i> Python</div>
-          <div class="skill-item"><i class="fas fa-user-lock"></i> IAM Concepts</div>
-          <div class="skill-item"><i class="fas fa-server"></i> Cloud Computing</div>
-          <div class="skill-item"><i class="fas fa-search"></i> Log Monitoring</div>
+    <div class="profile-frame">
+
+        <div class="profile-glow"></div>
+
+        <img
+            src="images/shravani.jpeg"
+            alt="Shravani Hendre"
+        >
+
+        <div class="profile-tag">
+            <span>IT</span>
+            <span>2023—27</span>
         </div>
 
-        <a href="#" target="_blank" class="btn-grad" style="margin-top:32px; display:inline-flex;">
-          Download Resume <i class="fas fa-download"></i>
+    </div>
+
+</div>
+
+
+<!-- Floating information -->
+
+<div class="floating-card floating-card-1">
+    <span class="floating-icon">☁</span>
+    <div>
+        <small>FOCUS</small>
+        <strong>Cloud Security</strong>
+    </div>
+</div>
+
+<div class="floating-card floating-card-2">
+    <span class="floating-icon">⌘</span>
+    <div>
+        <small>STACK</small>
+        <strong>Python · AWS · Linux</strong>
+    </div>
+</div>
+
+
+<div class="scroll-indicator">
+
+    <span>SCROLL TO EXPLORE</span>
+
+    <div class="scroll-line"></div>
+
+</div>
+
+
+</section>
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about" class="about section">
+
+
+<div class="section-header">
+
+    <span class="section-number">01</span>
+
+    <div>
+        <span class="section-kicker">ABOUT ME</span>
+        <h2>Building a foundation<br>in <span>security.</span></h2>
+    </div>
+
+</div>
+
+
+<div class="about-grid">
+
+    <div class="about-text">
+
+        <p class="large-text">
+            I'm a final-year B.Tech Information Technology
+            student with a strong interest in
+            <strong>cybersecurity and cloud security.</strong>
+        </p>
+
+        <p>
+            My learning journey combines programming,
+            Linux, networking, AWS and practical security
+            projects. I enjoy understanding how systems
+            work and then looking at them from a security
+            perspective.
+        </p>
+
+        <p>
+            I'm currently working on a
+            <strong>Multi-Cloud CSPM Platform</strong>
+            with a focus on AWS IAM security, while
+            continuing to build practical cybersecurity
+            projects.
+        </p>
+
+        <a href="#contact" class="text-link">
+            Let's work together
+            <span>↗</span>
         </a>
-      </div>
-      <div class="about-stats-col reveal">
-        <div class="stat-card">
-          <span class="stat-big">1</span><span class="stat-suf">+</span>
-          <p>AWS Courses Completed</p>
-        </div>
 
-        <div class="stat-card">
-          <span class="stat-big">3</span><span class="stat-suf">+</span>
-          <p>Core Skills (Linux, Python, Networking)</p>
-        </div>
-
-        <div class="stat-card">
-          <span class="stat-big">2</span><span class="stat-suf">+</span>
-          <p>Cybersecurity Domains Explored</p>
-        </div>
-
-        <div class="stat-card">
-          <span class="stat-big">∞</span>
-          <p>Learning & Growth</p>
-        </div>
-      </div>
     </div>
-  </div>
+
+
+    <div class="about-details">
+
+        <div class="detail-card">
+
+            <span class="detail-number">01</span>
+
+            <div>
+                <small>EDUCATION</small>
+                <strong>B.Tech — Information Technology</strong>
+                <p>DBATU Lonere · 2023—2027</p>
+            </div>
+
+        </div>
+
+
+        <div class="detail-card">
+
+            <span class="detail-number">02</span>
+
+            <div>
+                <small>PRIMARY INTEREST</small>
+                <strong>Cloud Security</strong>
+                <p>AWS · IAM · CSPM · Infrastructure Security</p>
+            </div>
+
+        </div>
+
+
+        <div class="detail-card">
+
+            <span class="detail-number">03</span>
+
+            <div>
+                <small>CURRENTLY LEARNING</small>
+                <strong>Cloud & Security Engineering</strong>
+                <p>AWS · Boto3 · IAM · Linux · Security Automation</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
 </section>
 
-<!-- ── WORK ── -->
-<section id="work" class="section work-sec">
-  <div class="container">
-    <p class="sec-label reveal">02 — Featured Work</p>
-    <h2 class="sec-title reveal">Selected <em>Projects</em></h2>
+<!-- =========================
+     SKILLS
+========================= -->
 
-    <div class="work-list">
-      <div class="work-item reveal">
-        <div class="work-img" style="background:linear-gradient(135deg,#0f0c29,#302b63,#24243e)">
-        <i class="fas fa-terminal work-ico"></i>
-      </div>
-      <div class="work-info">
-        <span class="work-tag">Linux</span>
-        <h3>Sticky Notes CLI Tool</h3>
-        <p>A command-line based notes application built using Linux and shell scripting for managing quick notes efficiently.</p>
-        <a href="https://github.com/shraavaniii/sticky-notes-cli" target="_blank" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
-      </div>
+<section id="skills" class="skills section">
+
+
+<div class="section-header">
+
+    <span class="section-number">02</span>
+
+    <div>
+        <span class="section-kicker">TECHNICAL SKILLS</span>
+        <h2>Tools I use to<br><span>build & secure.</span></h2>
     </div>
-  </div>
+
+</div>
+
+
+<div class="skills-grid">
+
+
+    <!-- Cybersecurity -->
+
+    <div class="skill-card">
+
+        <div class="skill-top">
+            <span class="skill-index">01</span>
+            <span class="skill-symbol">◈</span>
+        </div>
+
+        <h3>Cybersecurity</h3>
+
+        <p>
+            Security concepts and practical exposure
+            across network and vulnerability security.
+        </p>
+
+        <div class="skill-tags">
+            <span>Network Security</span>
+            <span>Vulnerability Assessment</span>
+            <span>Ethical Hacking</span>
+            <span>IAM Security</span>
+            <span>Cloud Security</span>
+        </div>
+
+    </div>
+
+
+    <!-- Cloud -->
+
+    <div class="skill-card featured-skill">
+
+        <div class="skill-top">
+            <span class="skill-index">02</span>
+            <span class="skill-symbol">☁</span>
+        </div>
+
+        <h3>Cloud & AWS</h3>
+
+        <p>
+            Hands-on AWS learning through cloud
+            infrastructure and CSPM development.
+        </p>
+
+        <div class="skill-tags">
+            <span>AWS</span>
+            <span>EC2</span>
+            <span>VPC</span>
+            <span>IAM</span>
+            <span>Boto3</span>
+        </div>
+
+    </div>
+
+
+    <!-- Programming -->
+
+    <div class="skill-card">
+
+        <div class="skill-top">
+            <span class="skill-index">03</span>
+            <span class="skill-symbol">{ }</span>
+        </div>
+
+        <h3>Programming</h3>
+
+        <p>
+            Programming fundamentals and application
+            development using multiple languages.
+        </p>
+
+        <div class="skill-tags">
+            <span>Python</span>
+            <span>C</span>
+            <span>C++</span>
+            <span>Java</span>
+        </div>
+
+    </div>
+
+
+    <!-- Linux -->
+
+    <div class="skill-card">
+
+        <div class="skill-top">
+            <span class="skill-index">04</span>
+            <span class="skill-symbol">⌁</span>
+        </div>
+
+        <h3>Linux & Shell</h3>
+
+        <p>
+            Command-line environments, Linux administration
+            basics and shell scripting.
+        </p>
+
+        <div class="skill-tags">
+            <span>Linux</span>
+            <span>CentOS</span>
+            <span>Bash</span>
+            <span>Shell Scripting</span>
+        </div>
+
+    </div>
+
+
+    <!-- Networking -->
+
+    <div class="skill-card">
+
+        <div class="skill-top">
+            <span class="skill-index">05</span>
+            <span class="skill-symbol">⌁</span>
+        </div>
+
+        <h3>Networking</h3>
+
+        <p>
+            Networking fundamentals used throughout
+            cybersecurity and cloud environments.
+        </p>
+
+        <div class="skill-tags">
+            <span>TCP/IP</span>
+            <span>OSI</span>
+            <span>IP Addressing</span>
+            <span>Subnetting</span>
+            <span>DNS</span>
+            <span>DHCP</span>
+        </div>
+
+    </div>
+
+
+    <!-- Security Tools -->
+
+    <div class="skill-card">
+
+        <div class="skill-top">
+            <span class="skill-index">06</span>
+            <span class="skill-symbol">⚙</span>
+        </div>
+
+        <h3>Security Tools</h3>
+
+        <p>
+            Practical exposure to commonly used
+            cybersecurity and network analysis tools.
+        </p>
+
+        <div class="skill-tags">
+            <span>Nmap</span>
+            <span>Wireshark</span>
+            <span>Burp Suite</span>
+            <span>Metasploit</span>
+            <span>Scapy</span>
+        </div>
+
+    </div>
+
+</div>
+
+
 </section>
 
-<!-- ── CONTACT ── -->
-<section id="contact" class="section contact-sec">
-  <div class="container">
-    <p class="sec-label reveal">04 — Contact</p>
-    <h2 class="sec-title reveal">Get in <em>Touch</em></h2>
-    <div class="contact-grid">
-      <div class="contact-left reveal">
-        <p>Open to internships, learning opportunities, and collaborations in cloud and cybersecurity.</p>
-        <div class="c-info"><i class="fas fa-envelope"></i><div><span>Email</span><a href="https://mail.google.com/mail/?view=cm&to=shravanihendr@gmail.com" target="_blank">shravanihendr@gmail.com</a></div></div>
-        <div class="c-info"><i class="fas fa-phone"></i><div><span>Phone</span><a href="tel:+917071554950">+91 7071554950</a></div></div>
-        <div class="c-info"><i class="fas fa-location-dot"></i><div><span>Location</span><p>Maharashtra, India</p></div></div>
-        <div class="c-socials">
-          <a href="https://www.linkedin.com/in/shravani-hendre-83a63328b" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/shraavaniii" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://x.com/Shravani728277" target="_blank"><i class="fab fa-twitter"></i></a>
-        </div>
-      </div>
-      <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mjgadrlp" method="POST">
-        <div class="form-row">
-          <div class="f-group"><label>Name</label><input type="text" name="name" placeholder="John Doe" required></div>
-          <div class="f-group"><label>Email</label><input type="email" name="email" placeholder="john@example.com" required></div>
-        </div>
-        <div class="f-group"><label>Subject</label><input type="text" name="subject" placeholder="Project enquiry"></div>
-        <div class="f-group"><label>Message</label><textarea rows="5" name="message" placeholder="Tell me about your project..." required></textarea></div>
-        <button type="submit" class="btn-grad" style="width:100%;justify-content:center;">
-          Send Message <i class="fas fa-paper-plane"></i>
-        </button>
-      </form>
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects" class="projects section">
+
+
+<div class="section-header">
+
+    <span class="section-number">03</span>
+
+    <div>
+        <span class="section-kicker">SELECTED WORK</span>
+        <h2>Projects I've<br><span>built & explored.</span></h2>
     </div>
-  </div>
+
+</div>
+
+
+<!-- FEATURED PROJECT -->
+
+<article class="project-featured">
+
+    <div class="project-info">
+
+        <div class="project-meta">
+
+            <span>01 / FEATURED PROJECT</span>
+
+            <span class="project-status completed">
+                ● BUILT
+            </span>
+
+        </div>
+
+        <h3>CyberSec<br><span>Nexus</span></h3>
+
+        <p>
+            A heuristic-based Threat Intelligence &
+            Security Operations Dashboard designed to
+            analyze suspicious URLs, emails, IP addresses,
+            and server logs for potential security threats.
+        </p>
+
+        <div class="project-tech">
+
+            <span>React</span>
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>PostgreSQL</span>
+            <span>Python</span>
+            <span>Scikit-learn</span>
+            <span>TensorFlow</span>
+
+        </div>
+
+        <a
+            href="https://github.com/shraavaniii/CyberSec-Nexus"
+            target="_blank"
+            class="project-link"
+        >
+            View on GitHub
+            <span>↗</span>
+        </a>
+
+    </div>
+
+
+    <div class="project-visual">
+
+        <div class="visual-label">
+            CYBERSEC-NEXUS
+        </div>
+
+        <div class="project-screens">
+
+            <img
+                src="images/cybersec-nexus-1.jpg"
+                alt="CyberSec Nexus screenshot"
+            >
+
+            <img
+                src="images/cybersec-nexus-2.jpg"
+                alt="CyberSec Nexus screenshot"
+            >
+
+        </div>
+
+        <div class="visual-placeholder">
+            Add your CyberSec Nexus screenshots
+        </div>
+
+    </div>
+
+</article>
+
+
+
+<!-- OTHER PROJECTS -->
+
+<div class="project-grid">
+
+
+    <!-- CSPM -->
+
+    <article class="project-card cspm-card">
+
+        <div class="project-card-top">
+
+            <span>02</span>
+
+            <span class="project-status progress">
+                ● IN PROGRESS
+            </span>
+
+        </div>
+
+        <div class="project-card-icon">
+            ☁
+        </div>
+
+        <h3>Multi-Cloud<br>CSPM Platform</h3>
+
+        <p>
+            A Cloud Security Posture Management platform
+            being developed to identify cloud
+            misconfigurations and security risks across
+            AWS, GCP and Azure.
+        </p>
+
+        <div class="project-focus">
+
+            <span>Current Focus</span>
+
+            <strong>
+                AWS IAM Security
+            </strong>
+
+            <small>
+                MFA · Access Keys · Policies ·
+                Least Privilege
+            </small>
+
+        </div>
+
+        <div class="project-tech">
+            <span>Python</span>
+            <span>AWS</span>
+            <span>Boto3</span>
+            <span>IAM</span>
+        </div>
+
+    </article>
+
+
+
+    <!-- BANK SYSTEM -->
+
+    <article class="project-card">
+
+        <div class="project-card-top">
+
+            <span>03</span>
+
+            <span class="project-status completed">
+                ● COMPLETED
+            </span>
+
+        </div>
+
+        <div class="project-card-icon">
+            { }
+        </div>
+
+        <h3>Bank Account<br>Management System</h3>
+
+        <p>
+            A C++ application implementing account
+            creation, deposits, withdrawals, balance
+            management and fund transfers using
+            object-oriented programming and file handling.
+        </p>
+
+        <div class="project-focus">
+
+            <span>Core Concepts</span>
+
+            <strong>
+                OOP + File Handling
+            </strong>
+
+            <small>
+                Classes · Constructors · Encapsulation ·
+                Validation
+            </small>
+
+        </div>
+
+        <div class="project-tech">
+            <span>C++</span>
+            <span>OOP</span>
+            <span>File Handling</span>
+        </div>
+
+    </article>
+
+
+
+    <!-- STICKY NOTES -->
+
+    <article class="project-card">
+
+        <div class="project-card-top">
+
+            <span>04</span>
+
+            <span class="project-status completed">
+                ● BUILT
+            </span>
+
+        </div>
+
+        <div class="project-card-icon">
+            ⌁
+        </div>
+
+        <h3>Sticky Notes<br>CLI Tool</h3>
+
+        <p>
+            A command-line sticky notes project built
+            while working with Linux and CentOS,
+            focusing on terminal-based interaction
+            and shell environments.
+        </p>
+
+        <div class="project-tech">
+            <span>Linux</span>
+            <span>CentOS</span>
+            <span>CLI</span>
+        </div>
+
+        <a
+            href="https://github.com/shraavaniii/sticky-notes-cli"
+            target="_blank"
+            class="project-link"
+        >
+            View Code
+            <span>↗</span>
+        </a>
+
+    </article>
+
+</div>
+
+
 </section>
 
-<!-- ── FOOTER ── -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-logo">
-        <svg width="32" height="32" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="10" fill="url(#lg2)"/><text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Syne" font-weight="800" font-size="14">SH</text><defs><linearGradient id="lg2" x1="0" y1="0" x2="36" y2="36"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs></svg>
-        <span>Shravani Hendre</span>
-      </div>
-      <p class="footer-copy">© 2025 Shravani Hendre. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
-      </div>
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience" class="experience section">
+
+
+<div class="section-header">
+
+    <span class="section-number">04</span>
+
+    <div>
+        <span class="section-kicker">EXPERIENCE</span>
+        <h2>Learning through<br><span>hands-on work.</span></h2>
     </div>
-  </div>
+
+</div>
+
+
+<div class="experience-list">
+
+
+    <!-- CODTECH -->
+
+    <article class="experience-item">
+
+        <div class="experience-date">
+            INTERNSHIP
+        </div>
+
+        <div class="experience-main">
+
+            <div class="experience-heading">
+
+                <div>
+                    <span class="experience-type">
+                        CYBERSECURITY
+                    </span>
+
+                    <h3>Cyber Security Intern</h3>
+
+                    <p>CodTech IT Solutions</p>
+                </div>
+
+                <span class="experience-arrow">↗</span>
+
+            </div>
+
+            <p class="experience-description">
+                Worked on cybersecurity projects using
+                Python, including a Password Strength
+                Checker and a Network Vulnerability Scanner.
+                Gained hands-on experience in Python
+                security tools, network security,
+                vulnerability assessment, and cybersecurity
+                best practices.
+            </p>
+
+            <div class="experience-tags">
+                <span>Python</span>
+                <span>Network Security</span>
+                <span>Vulnerability Assessment</span>
+                <span>Cybersecurity</span>
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- CODING SAMURAI -->
+
+    <article class="experience-item">
+
+        <div class="experience-date">
+            INTERNSHIP
+        </div>
+
+        <div class="experience-main">
+
+            <div class="experience-heading">
+
+                <div>
+                    <span class="experience-type">
+                        C++ DEVELOPMENT
+                    </span>
+
+                    <h3>C++ Intern</h3>
+
+                    <p>Coding Samurai</p>
+                </div>
+
+                <span class="experience-arrow">↗</span>
+
+            </div>
+
+            <p class="experience-description">
+                Worked on C++ programming tasks involving
+                a Calculator Program and a Bank Account
+                Management System. Applied Object-Oriented
+                Programming, file handling, constructors,
+                encapsulation, conditional logic, input
+                validation, and debugging.
+            </p>
+
+            <div class="experience-tags">
+                <span>C++</span>
+                <span>OOP</span>
+                <span>File Handling</span>
+                <span>Debugging</span>
+            </div>
+
+        </div>
+
+    </article>
+
+</div>
+
+
+</section>
+
+<!-- =========================
+     CERTIFICATIONS
+========================= -->
+
+<section id="certifications" class="certifications section">
+
+
+<div class="section-header">
+
+    <span class="section-number">05</span>
+
+    <div>
+        <span class="section-kicker">CERTIFICATIONS</span>
+        <h2>Always <span>learning.</span></h2>
+    </div>
+
+</div>
+
+
+<div class="cert-grid">
+
+    <div class="cert-item">
+        <span>01</span>
+        <strong>CompTIA Security+</strong>
+        <small>Course Completion</small>
+    </div>
+
+    <div class="cert-item">
+        <span>02</span>
+        <strong>Ethical Hacking & Cybersecurity</strong>
+        <small>Course</small>
+    </div>
+
+    <div class="cert-item">
+        <span>03</span>
+        <strong>Linux</strong>
+        <small>Course</small>
+    </div>
+
+    <div class="cert-item">
+        <span>04</span>
+        <strong>Python</strong>
+        <small>Course</small>
+    </div>
+
+    <div class="cert-item">
+        <span>05</span>
+        <strong>Firewall</strong>
+        <small>Course</small>
+    </div>
+
+    <div class="cert-item">
+        <span>06</span>
+        <strong>MS SQL Database Management</strong>
+        <small>Course</small>
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact section">
+
+
+<div class="contact-inner">
+
+    <div class="section-header">
+
+    <span class="section-number">06</span>
+
+    <div>
+        <span class="section-kicker">CONTACT</span>
+
+    <h2>
+        Let's build something<br>
+        <span>secure.</span>
+    </h2>
+
+    <p>
+        I'm currently looking for internship opportunities
+        where I can apply my cybersecurity and cloud
+        knowledge, learn from experienced professionals,
+        and contribute to real-world projects.
+    </p>
+
+
+    <a
+        href="mailto:shravanihendr@gmail.com"
+        class="email-link"
+    >
+        shravanihendr@gmail.com
+        <span>↗</span>
+    </a>
+
+
+    <div class="contact-details">
+
+        <div>
+            <small>LOCATION</small>
+            <span>Maharashtra, India</span>
+        </div>
+
+        <div>
+            <small>FOCUS</small>
+            <span>Cybersecurity · Cloud Security</span>
+        </div>
+
+    </div>
+
+
+    <div class="social-links">
+
+        <a
+            href="https://github.com/shraavaniii"
+            target="_blank"
+        >
+            GitHub ↗
+        </a>
+
+        <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+        >
+            LinkedIn ↗
+        </a>
+
+    </div>
+
+</div>
+
+
+</section>
+
+</main>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+
+<div class="footer-logo">
+    SH<span>.</span>
+</div>
+
+<p>
+    Designed & built by Shravani Hendre
+</p>
+
+<span>
+    © 2026
+</span>
+
+
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>

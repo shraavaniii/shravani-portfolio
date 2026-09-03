@@ -1,123 +1,587 @@
-// ── Cursor ──
-const cursor = document.getElementById('cursor');
-document.addEventListener('mousemove', e => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top  = e.clientY + 'px';
-});
-document.querySelectorAll('a,button,.srv-card,.work-img,.stat-card').forEach(el => {
-  el.addEventListener('mouseenter', () => document.body.classList.add('cursor-big'));
-  el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-big'));
+/* =========================================================
+SHravani Hendre — Portfolio JavaScript
+========================================================= */
+
+/* =========================================================
+
+1. ELEMENTS
+   ========================================================= */
+
+const body = document.body;
+
+const navbar = document.querySelector(".navbar");
+
+const menuButton = document.querySelector(".menu-btn");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+const mobileLinks = document.querySelectorAll(".mobile-menu a");
+
+const navLinks = document.querySelectorAll(".nav-link");
+
+const sections = document.querySelectorAll("section[id]");
+
+const cursor = document.querySelector(".cursor");
+const cursorFollower = document.querySelector(".cursor-follower");
+
+const profileFrame = document.querySelector(".profile-frame");
+
+/* =========================================================
+2. CUSTOM CURSOR
+========================================================= */
+
+if (cursor && cursorFollower && window.innerWidth > 700) {
+
+
+let mouseX = 0;
+let mouseY = 0;
+
+let followerX = 0;
+let followerY = 0;
+
+
+document.addEventListener("mousemove", (event) => {
+
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+
+    cursor.style.left = `${mouseX}px`;
+    cursor.style.top = `${mouseY}px`;
+
 });
 
-// ── Navbar scroll ──
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 50);
-  updateActiveNav();
-});
 
-// ── Mobile drawer ──
-const burger = document.getElementById('burger');
-const drawer = document.getElementById('drawer');
-burger.addEventListener('click', () => {
-  burger.classList.toggle('open');
-  drawer.classList.toggle('open');
-  document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
-});
-document.querySelectorAll('.d-link').forEach(l => {
-  l.addEventListener('click', () => {
-    burger.classList.remove('open');
-    drawer.classList.remove('open');
-    document.body.style.overflow = '';
-  });
-});
+function animateCursor() {
 
-// ── Active nav on scroll ──
-function updateActiveNav() {
-  const sections = document.querySelectorAll('section[id]');
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 120) current = s.id;
-  });
-  document.querySelectorAll('.nav-a').forEach(a => {
-    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-  });
+    followerX += (mouseX - followerX) * 0.12;
+    followerY += (mouseY - followerY) * 0.12;
+
+    cursorFollower.style.left = `${followerX}px`;
+    cursorFollower.style.top = `${followerY}px`;
+
+    requestAnimationFrame(animateCursor);
+
 }
 
-// ── Typewriter ──
-const words = ['Cloud Security Learner.','AWS Beginner.','Cybersecurity Enthusiast.','Linux Explorer.','Aspiring Cloud Engineer.'];
-let wi = 0, ci = 0, deleting = false;
-const tw = document.getElementById('typewriter');
+animateCursor();
 
-function type() {
-  const word = words[wi];
-  if (!deleting) {
-    tw.textContent = word.slice(0, ++ci);
-    if (ci === word.length) { deleting = true; setTimeout(type, 1600); return; }
-  } else {
-    tw.textContent = word.slice(0, --ci);
-    if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; }
-  }
-  setTimeout(type, deleting ? 60 : 100);
+
+const interactiveElements = document.querySelectorAll(
+    "a, button, .project-card, .skill-card, .profile-frame"
+);
+
+
+interactiveElements.forEach((element) => {
+
+    element.addEventListener("mouseenter", () => {
+
+        cursorFollower.style.width = "55px";
+        cursorFollower.style.height = "55px";
+
+        cursorFollower.style.background =
+            "rgba(155, 108, 255, 0.08)";
+
+    });
+
+
+    element.addEventListener("mouseleave", () => {
+
+        cursorFollower.style.width = "34px";
+        cursorFollower.style.height = "34px";
+
+        cursorFollower.style.background =
+            "transparent";
+
+    });
+
+});
+```
+
 }
-type();
 
-// ── Scroll Reveal ──
-const revealObs = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('in');
-      revealObs.unobserve(entry.target);
+/* =========================================================
+3. MOBILE MENU
+========================================================= */
+
+if (menuButton && mobileMenu) {
+
+```
+menuButton.addEventListener("click", () => {
+
+    mobileMenu.classList.toggle("open");
+
+    const isOpen = mobileMenu.classList.contains("open");
+
+    menuButton.setAttribute(
+        "aria-expanded",
+        isOpen
+    );
+
+});
+
+
+mobileLinks.forEach((link) => {
+
+    link.addEventListener("click", () => {
+
+        mobileMenu.classList.remove("open");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    });
+
+});
+```
+
+}
+
+/* =========================================================
+4. NAVBAR SCROLL EFFECT
+========================================================= */
+
+function updateNavbar() {
+
+```
+if (!navbar) return;
+
+if (window.scrollY > 40) {
+
+    navbar.style.background =
+        "rgba(7, 7, 11, 0.90)";
+
+    navbar.style.borderBottom =
+        "1px solid rgba(255, 255, 255, 0.08)";
+
+} else {
+
+    navbar.style.background =
+        "rgba(7, 7, 11, 0.72)";
+
+    navbar.style.borderBottom =
+        "1px solid rgba(255, 255, 255, 0.05)";
+
+}
+```
+
+}
+
+window.addEventListener("scroll", updateNavbar);
+
+updateNavbar();
+
+/* =========================================================
+5. ACTIVE NAVIGATION LINK
+========================================================= */
+
+function updateActiveNavigation() {
+
+```
+let currentSection = "";
+
+const scrollPosition =
+    window.scrollY + window.innerHeight * 0.35;
+
+
+sections.forEach((section) => {
+
+    const sectionTop = section.offsetTop;
+
+    const sectionHeight = section.offsetHeight;
+
+    if (
+        scrollPosition >= sectionTop &&
+        scrollPosition < sectionTop + sectionHeight
+    ) {
+
+        currentSection = section.getAttribute("id");
+
     }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-document.querySelectorAll('.reveal').forEach((el, i) => {
-  // stagger siblings
-  const siblings = [...el.parentElement.querySelectorAll('.reveal')];
-  el.style.transitionDelay = (siblings.indexOf(el) * 0.1) + 's';
-  revealObs.observe(el);
 });
 
-// ── Counter animation ──
-function animCount(el) {
-  const target = +el.dataset.target;
-  const dur = 1800;
-  const start = performance.now();
-  function step(now) {
-    const t = Math.min((now - start) / dur, 1);
-    const ease = 1 - Math.pow(1 - t, 3);
-    el.textContent = Math.floor(ease * target);
-    if (t < 1) requestAnimationFrame(step);
-    else el.textContent = target;
-  }
-  requestAnimationFrame(step);
-}
 
-const cntObs = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      animCount(entry.target);
-      cntObs.unobserve(entry.target);
+navLinks.forEach((link) => {
+
+    link.classList.remove("active");
+
+    const href = link.getAttribute("href");
+
+    if (href === `#${currentSection}`) {
+
+        link.classList.add("active");
+
     }
-  });
-}, { threshold: 0.5 });
 
-document.querySelectorAll('.counter').forEach(el => cntObs.observe(el));
+});
+```
 
-// ── Smooth scroll ──
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-  });
+}
+
+window.addEventListener(
+"scroll",
+updateActiveNavigation
+);
+
+updateActiveNavigation();
+
+/* =========================================================
+6. SMOOTH SCROLL
+========================================================= */
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+
+```
+link.addEventListener("click", (event) => {
+
+    const targetId =
+        link.getAttribute("href");
+
+    if (
+        !targetId ||
+        targetId === "#" ||
+        targetId.length < 2
+    ) {
+        return;
+    }
+
+
+    const target =
+        document.querySelector(targetId);
+
+
+    if (!target) return;
+
+
+    event.preventDefault();
+
+
+    const navbarHeight =
+        navbar ? navbar.offsetHeight : 0;
+
+
+    const targetPosition =
+        target.getBoundingClientRect().top +
+        window.scrollY -
+        navbarHeight;
+
+
+    window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth"
+    });
+
+});
+```
+
 });
 
-// ── Contact form ──
-const form = document.getElementById('contactForm');
-if (form) {
-  form.addEventListener('submit', e => {
-    const btn = form.querySelector('button[type="submit"]');
-    btn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
-  });
+/* =========================================================
+7. SCROLL REVEAL
+========================================================= */
+
+const revealElements = document.querySelectorAll(
+".section, .project-featured, .project-card, .experience-item, .cert-item"
+);
+
+if ("IntersectionObserver" in window) {
+
+```
+const revealObserver =
+    new IntersectionObserver(
+        (entries, observer) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add(
+                        "visible"
+                    );
+
+                    observer.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+revealElements.forEach((element) => {
+
+    revealObserver.observe(element);
+
+});
+```
+
+} else {
+
+```
+revealElements.forEach((element) => {
+
+    element.classList.add("visible");
+
+});
+```
+
 }
+
+/* =========================================================
+8. STAGGER PROJECT CARDS
+========================================================= */
+
+const projectCards =
+document.querySelectorAll(".project-card");
+
+projectCards.forEach((card, index) => {
+
+```
+card.style.transitionDelay =
+    `${index * 0.08}s`;
+```
+
+});
+
+/* =========================================================
+9. STAGGER SKILL CARDS
+========================================================= */
+
+const skillCards =
+document.querySelectorAll(".skill-card");
+
+skillCards.forEach((card, index) => {
+
+```
+card.style.transitionDelay =
+    `${index * 0.07}s`;
+```
+
+});
+
+/* =========================================================
+10. HERO PROFILE PARALLAX
+========================================================= */
+
+if (profileFrame && window.innerWidth > 700) {
+
+```
+document.addEventListener(
+    "mousemove",
+    (event) => {
+
+        const x =
+            (event.clientX /
+                window.innerWidth -
+                0.5) * 8;
+
+        const y =
+            (event.clientY /
+                window.innerHeight -
+                0.5) * 8;
+
+
+        profileFrame.style.transform =
+            `translate(${x}px, ${y}px)`;
+
+    }
+);
+```
+
+}
+
+/* =========================================================
+11. PROJECT CARD TILT
+========================================================= */
+
+if (window.innerWidth > 900) {
+
+```
+projectCards.forEach((card) => {
+
+    card.addEventListener(
+        "mousemove",
+        (event) => {
+
+            const rect =
+                card.getBoundingClientRect();
+
+
+            const x =
+                event.clientX - rect.left;
+
+            const y =
+                event.clientY - rect.top;
+
+
+            const centerX =
+                rect.width / 2;
+
+            const centerY =
+                rect.height / 2;
+
+
+            const rotateX =
+                (y - centerY) / 35;
+
+            const rotateY =
+                (centerX - x) / 35;
+
+
+            card.style.transform =
+                `perspective(800px)
+                 rotateX(${rotateX}deg)
+                 rotateY(${rotateY}deg)
+                 translateY(-5px)`;
+
+        }
+    );
+
+
+    card.addEventListener(
+        "mouseleave",
+        () => {
+
+            card.style.transform =
+                "perspective(800px) rotateX(0) rotateY(0) translateY(0)";
+
+        }
+    );
+
+});
+```
+
+}
+
+/* =========================================================
+12. HERO MOUSE MOVEMENT
+========================================================= */
+
+const hero =
+document.querySelector(".hero");
+
+if (hero && window.innerWidth > 900) {
+
+```
+hero.addEventListener(
+    "mousemove",
+    (event) => {
+
+        const x =
+            (event.clientX /
+                window.innerWidth -
+                0.5);
+
+        const y =
+            (event.clientY /
+                window.innerHeight -
+                0.5);
+
+
+        const grid =
+            document.querySelector(".hero-grid");
+
+
+        if (grid) {
+
+            grid.style.transform =
+                `translate(${x * 12}px, ${y * 12}px)`;
+
+        }
+
+    }
+);
+```
+
+}
+
+/* =========================================================
+13. ESC KEY — CLOSE MOBILE MENU
+========================================================= */
+
+document.addEventListener(
+"keydown",
+(event) => {
+
+```
+    if (
+        event.key === "Escape" &&
+        mobileMenu
+    ) {
+
+        mobileMenu.classList.remove(
+            "open"
+        );
+
+    }
+
+}
+```
+
+);
+
+/* =========================================================
+14. CURRENT YEAR
+========================================================= */
+
+const footerYear =
+document.querySelector("footer span");
+
+if (footerYear) {
+
+```
+footerYear.textContent =
+    `© ${new Date().getFullYear()}`;
+```
+
+}
+
+/* =========================================================
+15. IMAGE FALLBACK
+========================================================= */
+
+const projectImages =
+document.querySelectorAll(
+".project-screens img"
+);
+
+projectImages.forEach((image) => {
+
+```
+image.addEventListener(
+    "error",
+    () => {
+
+        image.style.display = "none";
+
+    }
+);
+```
+
+});
+
+/* =========================================================
+16. PAGE LOADED
+========================================================= */
+
+window.addEventListener(
+"load",
+() => {
+
+  ```
+      document.body.classList.add(
+          "page-loaded"
+      );
+
+  ```
+}
+
+);
+```
