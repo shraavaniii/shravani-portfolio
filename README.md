@@ -87,6 +87,29 @@ I believe in **learning by doing**: instead of only studying concepts, I try to 
 
 ## 📂 Projects
 
+### 🔐 Linux Security Auditor — Linux Security Auditing Tool
+
+A Bash-based Linux security auditing tool designed to assess common system security configurations, identify potential weaknesses, and provide actionable security recommendations.
+
+**Key Features:**
+
+* System information and configuration checks
+* Firewall and SSH configuration checks
+* User accounts, password status, and password aging analysis
+* Sudo privileges and privilege configuration checks
+* File permissions and SUID file detection
+* Network-facing port analysis
+* System update and package status checks
+* Cron job and scheduled task analysis
+* Failed authentication and system error monitoring
+* World-writable directory detection
+* PASS, INFO, WARN, and CRITICAL finding classification
+* Overall security risk score and recommendations
+
+**Tech Stack:** Bash, Linux, Linux Security
+
+---
+
 ### 🔐 CyberSec Nexus — Threat Intelligence & Security Operations Dashboard
 
 A full-stack cybersecurity platform designed to provide multiple security analysis capabilities through a centralized dashboard.
